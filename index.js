@@ -76,8 +76,8 @@ app.use('/api',userPasienRoute);
 let variasiObatRoute = require('./variasiObat/variasiObatRoute.js');
 app.use('/api',variasiObatRoute);
 
-//  let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
-//  app.use('/api',penilaianTeknisRoute);
+ let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
+ app.use('/api',penilaianTeknisRoute);
 
 //  let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
 //  app.use('/api',penilaianNonTeknisRoute);

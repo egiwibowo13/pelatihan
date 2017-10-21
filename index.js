@@ -79,8 +79,8 @@ app.use('/api',variasiObatRoute);
 let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
 app.use('/api',penilaianTeknisRoute);
 
-let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
-app.use('/api',penilaianNonTeknisRoute);
+ let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
+ app.use('/api',penilaianNonTeknisRoute);
 
 let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
 app.use('/api',penilaianAkhirRoute);
@@ -89,7 +89,7 @@ app.use('/api',penilaianAkhirRoute);
 
 
 //mong.connect('mongodb://localhost:27017/DBapotek');
-mong.connect('mongodb://egi:egi1213@ds113455.mlab.com:13455/dbpelatihan');
+mong.connect('mongodb://egi:egi1213@ds121345.mlab.com:21345/dbrumahsakit');
 app.listen(process.env.PORT || 8889, function(){
 	console.log('node app is running on port', app.get('port'));
 });

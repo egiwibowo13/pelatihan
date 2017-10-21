@@ -2,7 +2,7 @@ let ex = require('express');
 let route = ex.Router();
 let penilaianAkhirController = require('./penilaianAkhirController.js')
 
-route.get('/penilaianakhir', function (req, res) {
+route.get('/penilaianAkhir', function (req, res) {
     penilaianAkhirController.getPenilaianAkhir(function (err, respon) {
         if (err) {
             throw err;
@@ -11,7 +11,7 @@ route.get('/penilaianakhir', function (req, res) {
     });
 });
 
-route.get('/penilaianakhir/:_id', function (req, res) {
+route.get('/penilaianAkhir/:_id', function (req, res) {
     let id = req.params._id;
     penilaianAkhirController.getPenilaianAkhirById(id,function (err, respon) {
         if (err) {
@@ -21,7 +21,7 @@ route.get('/penilaianakhir/:_id', function (req, res) {
     });
 });
 
-route.post('/penilaianakhir', function (req, res) {
+route.post('/penilaianAkhir', function (req, res) {
     let akses = req.body;
     penilaianAkhirController.createPenilaianAkhir(akses, function (err, respon) {
         if (err) {
@@ -31,7 +31,7 @@ route.post('/penilaianakhir', function (req, res) {
     });
 });
 
-route.delete('/penilaianakhir/:_id', function (req, res) {
+route.delete('/penilaianAkhir/:_id', function (req, res) {
 
     penilaianAkhirController.deletePenilaianAkhir(req.params._id, function (err, respon) {
         if (err) {
@@ -41,7 +41,7 @@ route.delete('/penilaianakhir/:_id', function (req, res) {
     });
 });
 
-route.put('/penilaianakhir/:_id', function (req, res) {
+route.put('/penilaianAkhir/:_id', function (req, res) {
     let penilaianakhir = req.body;
     penilaianAkhirController.updatePenilaianAkhir(req.params._id,penilaianakhir, function (err, respon) {
         if (err) {

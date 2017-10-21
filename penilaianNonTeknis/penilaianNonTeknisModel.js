@@ -7,9 +7,9 @@ let penilaianNonTeknis = mong.Schema({
 	TipePenilaian:String,
 	Nilai:Number,
 	CreatedBy:String,
-    CreatedDate:Date,
+    CreatedDate:String,
     ModifiedBy:String,
-    ModifiedDate:Date
+    ModifiedDate:String
 });
 
 let PenilaianNonTeknis = module.exports = mong.model("PenilaianNonTeknis", penilaianNonTeknis, "PenilaianNonTeknis");

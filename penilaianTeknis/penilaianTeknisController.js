@@ -8,14 +8,14 @@ module.exports.getPenilaianTeknisById = function(_id,callback){
     PenilaianTeknis.findById(_id,callback);
 }
 
-module.exports.createPenilaianTeknis = function(akses,callback){
-    PenilaianTeknis.create(akses,callback);
+module.exports.createPenilaianTeknis = function(penilaianTeknis,callback){
+    PenilaianTeknis.create(penilaianTeknis,callback);
 }
 
 module.exports.deletePenilaianTeknis = function(id,callback){
     PenilaianTeknis.findByIdAndRemove(id,callback);
 }
 
-module.exports.updatePenilaianTeknis = function(id,akses,callback){
-    PenilaianTeknis.findByIdAndUpdate(id,akses,callback);
+module.exports.updatePenilaianTeknis = function(id,penilaianTeknis,callback){
+    PenilaianTeknis.findByIdAndUpdate(id,penilaianTeknis,callback);
 }

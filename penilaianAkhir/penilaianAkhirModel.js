@@ -8,9 +8,9 @@ let penilaianAkhir = mong.Schema({
 	Nilai1:Number,
     Nilai2:Number,
     CreatedBy:String,
-    CreatedDate:Date,
+    CreatedDate:String,
     ModifiedBy:String,
-    ModifiedDate:Date
+    ModifiedDate:String
 });
 
 let PenilaianAkhir = module.exports = mong.model("PenilaianAkhir", penilaianAkhir, "PenilaianAkhir");

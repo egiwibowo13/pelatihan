@@ -7,9 +7,9 @@ let penilaianTeknis = mong.Schema({
 	Materi:String,
 	Nilai:Number,
 	CreatedBy:String,
-    CreatedDate:Date,
+    CreatedDate:String,
     ModifiedBy:String,
-    ModifiedDate:Date
+    ModifiedDate:String
 });
 
 let PenilaianTeknis = module.exports = mong.model("PenilaianTeknis", penilaianTeknis, "PenilaianTeknis");

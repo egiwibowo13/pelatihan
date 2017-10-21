@@ -82,6 +82,9 @@ app.use('/api',variasiObatRoute);
  let penilaianNonTeknisRoute = require('./penilaianNonTeknis/penilaianNonTeknisRoute.js');
  app.use('/api',penilaianNonTeknisRoute);
 
+ let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
+ app.use('/api',penilaianAkhirRoute);
+
 
 
 //  let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');

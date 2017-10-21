@@ -70,4 +70,6 @@ app.use('/api',penilaianAkhirRoute);
 
 //mong.connect('mongodb://localhost:27017/DBapotek');
 mong.connect('mongodb://egi:egi1213@ds113455.mlab.com:13455/dbpelatihan');
-app.listen(8889);
+app.listen(process.env.PORT || 8889, function(){
+	console.log('node app is running on port', app.get('port'));
+});

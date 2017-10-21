@@ -3,11 +3,6 @@ let mong = require('mongoose');
 let ex = require('express');
 let app = ex();
 
-// global.config = require('./config/config');
-
-// let jwt    = require('jsonwebtoken');
-// let jwt_secret = "shhh";
-// let verifyToken = require('./middleware/verifyToken');
 //route
 app.use(bodyParser.json());
 // app.use(function(req,res,next){
@@ -23,53 +18,69 @@ app.use('/',function(req,res,next){
     next();
 });
 
-// let login = require('./Login/loginRoute.js');
-// app.use('/api',login);
 
-// let kodeAksesRoute = require('./kodeAkses/kodeAksesRoute.js');
-// app.use('/api',kodeAksesRoute);
+let petugasRoute = require('./petugas/petugasRoute.js');
+app.use('/api',petugasRoute);
 
-// let obatRoute = require('./obat/obatRoute.js');
-// app.use('/api',obatRoute);
+let provinsiRoute = require('./provinsi/provinsiRoute.js');
+app.use('/api',provinsiRoute);
 
-// let pelangganRoute = require('./pelanggan/pelangganRoute.js');
-// app.use('/api',pelangganRoute);
+let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
+app.use('/api',rumahsakitRoute);
 
-// let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
-// app.use('/api',pembayaranRoute);
+let perawatanRoute = require('./perawatan/perawatanRoute.js');
+app.use('/api',perawatanRoute);
 
-// let penjualanRoute = require('./penjualan/penjualanRoute.js');
-// app.use('/api',penjualanRoute);
+let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
+app.use('/api',pendaftaranRoute);
 
-// let petugasRoute = require('./petugas/petugasRoute.js');
-// app.use('/api',petugasRoute);
+let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
+app.use('/api',perawatanDiagnosaRoute);
 
-// let provinsiRoute = require('./provinsi/provinsiRoute.js');
-// app.use('/api',verifyToken,provinsiRoute);
+let dokterRoute = require('./dokter/dokterRoute.js');
+app.use('/api',dokterRoute);
 
-// let statusPembayaranRoute = require('./statusPembayaran/statusPembayaranRoute.js');
-// app.use('/api',statusPembayaranRoute);
+let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
+app.use('/api',pembayaranRoute);
 
-// let statusPenjualanRoute = require('./statusPenjualan/statusPenjualanRoute.js');
-// app.use('/api',statusPenjualanRoute);
+let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
+app.use('/api',pembayaranDetailRoute);
 
-// let tipePembayaranRoute = require('./tipePembayaran/tipePembayaranRoute.js');
-// app.use('/api',tipePembayaranRoute);
+let perawatRoute = require('./perawat/perawatRoute.js');
+app.use('/api',perawatRoute);
 
-// let tokoRoute = require('./toko/tokoRoute.js');
-// app.use('/api',tokoRoute);
+let diagnosaRoute = require('./diagnosa/diagnosaRoute.js');
+app.use('/api',diagnosaRoute);
 
-let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
-app.use('/api',penilaianTeknisRoute);
+let diagnosadetailRoute = require('./diagnosadetail/diagnosaDetailRoute.js');
+app.use('/api',diagnosadetailRoute);
 
- let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
- app.use('/api',penilaianNonTeknisRoute);
+let jenisObatRoute = require('./jenisObat/jenisObatRoute.js');
+app.use('/api',jenisObatRoute);
 
-let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
-app.use('/api',penilaianAkhirRoute);
+let kategoriObatRoute = require('./kategoriObat/kategoriObatRoute.js');
+app.use('/api',kategoriObatRoute);
+
+let pasienRoute = require('./pasien/pasienRoute.js');
+app.use('/api',pasienRoute);
+
+let ruangInapRoute = require('./ruanginap/ruangInapRoute.js');
+app.use('/api',ruangInapRoute);
+
+let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute.js');
+app.use('/api',satuanHargaDokterRoute);
+
+let userPasienRoute = require('./userPasien/userPasienRoute.js');
+app.use('/api',userPasienRoute);
+
+let variasiObatRoute = require('./variasiObat/variasiObatRoute.js');
+app.use('/api',variasiObatRoute);
+
+
+
 
 //mong.connect('mongodb://localhost:27017/DBapotek');
-mong.connect('mongodb://egi:egi1213@ds113455.mlab.com:13455/dbpelatihan');
+mong.connect('mongodb://egi:egi1213@ds121345.mlab.com:21345/dbrumahsakit');
 app.listen(process.env.PORT || 8889, function(){
 	console.log('node app is running on port', app.get('port'));
 });

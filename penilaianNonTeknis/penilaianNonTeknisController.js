@@ -9,7 +9,7 @@ module.exports.getPenilaianNonTeknisById = function(_id,callback){
 }
 
 module.exports.createPenilaianNonTeknis = function(penilaianNonTeknis,callback){
-    PenilaianNonTeknis.create(penilaianNonTeknis,callback);
+    PenilaianNonTeknis.create(penilaianTeknis,callback);
 }
 
 module.exports.deletePenilaianNonTeknis = function(id,callback){

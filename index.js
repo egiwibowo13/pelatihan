@@ -19,77 +19,77 @@ app.use('/',function(req,res,next){
 });
 
 
-let petugasRoute = require('./petugas/petugasRoute.js');
-app.use('/api',petugasRoute);
+// let petugasRoute = require('./petugas/petugasRoute.js');
+// app.use('/api',petugasRoute);
 
-let provinsiRoute = require('./provinsi/provinsiRoute.js');
-app.use('/api',provinsiRoute);
+// let provinsiRoute = require('./provinsi/provinsiRoute.js');
+// app.use('/api',provinsiRoute);
 
-let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
-app.use('/api',rumahsakitRoute);
+// let rumahsakitRoute = require('./rumahsakit/rumahsakitRoute.js');
+// app.use('/api',rumahsakitRoute);
 
-let perawatanRoute = require('./perawatan/perawatanRoute.js');
-app.use('/api',perawatanRoute);
+// let perawatanRoute = require('./perawatan/perawatanRoute.js');
+// app.use('/api',perawatanRoute);
 
-let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
-app.use('/api',pendaftaranRoute);
+// let pendaftaranRoute = require('./pendaftaran/pendaftaranRoute.js');
+// app.use('/api',pendaftaranRoute);
 
-let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
-app.use('/api',perawatanDiagnosaRoute);
+// let perawatanDiagnosaRoute = require('./perawatanDiagnosa/perawatanDiagnosaRoute.js');
+// app.use('/api',perawatanDiagnosaRoute);
 
-let dokterRoute = require('./dokter/dokterRoute.js');
-app.use('/api',dokterRoute);
+// let dokterRoute = require('./dokter/dokterRoute.js');
+// app.use('/api',dokterRoute);
 
-let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
-app.use('/api',pembayaranRoute);
+// let pembayaranRoute = require('./pembayaran/pembayaranRoute.js');
+// app.use('/api',pembayaranRoute);
 
-let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
-app.use('/api',pembayaranDetailRoute);
+// let pembayaranDetailRoute = require('./pembayaranDetail/pembayaranDetailRoute.js');
+// app.use('/api',pembayaranDetailRoute);
 
-let perawatRoute = require('./perawat/perawatRoute.js');
-app.use('/api',perawatRoute);
+// let perawatRoute = require('./perawat/perawatRoute.js');
+// app.use('/api',perawatRoute);
 
-let diagnosaRoute = require('./diagnosa/diagnosaRoute.js');
-app.use('/api',diagnosaRoute);
+// let diagnosaRoute = require('./diagnosa/diagnosaRoute.js');
+// app.use('/api',diagnosaRoute);
 
-let diagnosadetailRoute = require('./diagnosadetail/diagnosaDetailRoute.js');
-app.use('/api',diagnosadetailRoute);
+// let diagnosadetailRoute = require('./diagnosadetail/diagnosaDetailRoute.js');
+// app.use('/api',diagnosadetailRoute);
 
-let jenisObatRoute = require('./jenisObat/jenisObatRoute.js');
-app.use('/api',jenisObatRoute);
+// let jenisObatRoute = require('./jenisObat/jenisObatRoute.js');
+// app.use('/api',jenisObatRoute);
 
-let kategoriObatRoute = require('./kategoriObat/kategoriObatRoute.js');
-app.use('/api',kategoriObatRoute);
+// let kategoriObatRoute = require('./kategoriObat/kategoriObatRoute.js');
+// app.use('/api',kategoriObatRoute);
 
-let pasienRoute = require('./pasien/pasienRoute.js');
-app.use('/api',pasienRoute);
+// let pasienRoute = require('./pasien/pasienRoute.js');
+// app.use('/api',pasienRoute);
 
-let ruangInapRoute = require('./ruanginap/ruangInapRoute.js');
-app.use('/api',ruangInapRoute);
+// let ruangInapRoute = require('./ruanginap/ruangInapRoute.js');
+// app.use('/api',ruangInapRoute);
 
-let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute.js');
-app.use('/api',satuanHargaDokterRoute);
+// let satuanHargaDokterRoute = require('./satuanHargaDokter/satuanHargaDokterRoute.js');
+// app.use('/api',satuanHargaDokterRoute);
 
-let userPasienRoute = require('./userPasien/userPasienRoute.js');
-app.use('/api',userPasienRoute);
+// let userPasienRoute = require('./userPasien/userPasienRoute.js');
+// app.use('/api',userPasienRoute);
 
-let variasiObatRoute = require('./variasiObat/variasiObatRoute.js');
-app.use('/api',variasiObatRoute);
+// let variasiObatRoute = require('./variasiObat/variasiObatRoute.js');
+// app.use('/api',variasiObatRoute);
 
-// let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
-// app.use('/api',penilaianTeknisRoute);
+ let penilaianTeknisRoute = require('./penilaianTeknis/penilaianTeknisRoute.js');
+ app.use('/api',penilaianTeknisRoute);
 
- // let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
- // app.use('/api',penilaianNonTeknisRoute);
+ let penilaianNonTeknisRoute = require('./penilaianNonTeknis/PenilaianNonTeknisRoute.js');
+ app.use('/api',penilaianNonTeknisRoute);
 
-// let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
-// app.use('/api',penilaianAkhirRoute);
+ let penilaianAkhirRoute = require('./penilaianAkhir/penilaianAkhirRoute.js');
+ app.use('/api',penilaianAkhirRoute);
 
 
 
 
 //mong.connect('mongodb://localhost:27017/DBapotek');
-mong.connect('mongodb://egi:egi1213@ds121345.mlab.com:21345/dbrumahsakit');
+mong.connect('mongodb://egi:egi1213@ds113455.mlab.com:13455/dbpelatihan');
 app.listen(process.env.PORT || 8889, function(){
 	console.log('node app is running on port', app.get('port'));
 });

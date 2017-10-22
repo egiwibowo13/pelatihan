@@ -22,8 +22,8 @@ route.get('/penilaianNonTeknis/:_id', function (req, res) {
 });
 
 route.post('/penilaianNonTeknis', function (req, res) {
-    let akses = req.body;
-    penilaianNonTeknisController.createPenilaianNonTeknis(akses, function (err, respon) {
+    let penilaiannonteknis = req.body;
+    penilaianNonTeknisController.createPenilaianNonTeknis(penilaiannonteknis, function (err, respon) {
         if (err) {
             throw err;
         }

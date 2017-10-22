@@ -22,7 +22,7 @@ let penilaianNonTeknis = mong.Schema({
 	KdPeserta:String,
 	Minggu:String,
 	TipePenilaian:String,
-	Nilai:Number,
+	Nilai:String,
 	CreatedBy:String,
 	CreatedDate:String,
 	ModifiedBy:String,
